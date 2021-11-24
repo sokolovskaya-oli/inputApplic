@@ -8,9 +8,14 @@ function Catalog(){
     const {products, setProducts} = useContext(Context) 
 
     function massDelete(){
- 
-        setProducts(products.filter(product => product.flag = false))
+        const sortProduct = products.filter(product => product.flag === false)
+        setProducts([...sortProduct])
+    }
 
+    function checked (id){
+        const selectProduct = products.find((item)=>item.sku === id )
+        selectProduct.flag = !selectProduct.flag
+        setProducts([...products])
     }
    
     return(
@@ -29,7 +34,8 @@ function Catalog(){
                       
                       
                       return <ProductItem key={index}
-                      index={products.sku}
+                      id={products.sku}
+                      checked={checked}
                       productName={products.productName}
                       price={products.price}
                       size={products.size}
@@ -38,6 +44,7 @@ function Catalog(){
                       leng={products.leng}
                       weight={products.weight}
                       flag={products.flag}
+                      switchItem={products.switchItem}
                        />
                    })}
                              

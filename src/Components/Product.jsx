@@ -21,8 +21,10 @@ function Product(){
 
     function handleSubmitForm (event){
        event.preventDefault()
-        const data={ sku, productName,price, size,height, width, leng, weight, flag}
-        setProducts([...products, data])
+       console.log(products)
+        const data={ sku, productName,price, size,height, width, leng, weight, flag, switchItem}
+        products.push(data)
+        setProducts([...products])
         backToHome()
     }
 
@@ -151,9 +153,8 @@ function Product(){
                         </div>
                         }
                     </div>
-                <button type="submit" onSubmit={handleSubmitForm}  >Save</button>
-                
-                </form>
+                <button className="save_btn" type="submit" onSubmit={handleSubmitForm}  >Save</button>
+               </form>
 
             </div>
         </section>

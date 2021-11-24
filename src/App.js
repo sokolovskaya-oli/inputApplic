@@ -17,10 +17,10 @@ function App() {
   const [width, setWidth]=useState('')
   const [leng, setLeng]=useState('')
   const [weight, setWeight]=useState('')
-  const [flag, setFlag] = useState(false);
+ 
 
   const [products, setProducts] = useState([
-      {id:'new Date().getTime()', sku:'123', productName:'DVD-music', price: '15',  size:'10', flag: false}])
+      {sku:'123', productName:'DVD-music', price: '15',  size:'10', flag: false}])
 
 
   useEffect(()=>{
@@ -30,7 +30,7 @@ function App() {
   
   return (
     <BrowserRouter>
-    <Context.Provider value={{products, setProducts, switchItem, setswitchItem, sku, setSku, productName, setProductName, price, setPrice, size, setSize, height, setHeight, width, setWidth, leng, setLeng, weight, setWeight, flag, setFlag}}>
+    <Context.Provider value={{products, setProducts, switchItem, setswitchItem, sku, setSku, productName, setProductName, price, setPrice, size, setSize, height, setHeight, width, setWidth, leng, setLeng, weight, setWeight}}>
       <div className="App">
       
         <Switch>
