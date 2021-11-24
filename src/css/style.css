@@ -59,14 +59,8 @@ button{
     width: 50%;
     display: flex;
     flex-direction: column;
-    position: relative;
+ }
 
-}
-#product_form button{
-    position: absolute;
-    top:0;
-    left:20px; 
-}
 
 input{
     padding: 10px;

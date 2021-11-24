@@ -5,7 +5,7 @@ import ProductItem from "./ProductItem";
 import Context from "./Context";
 
 function Catalog(){
-    const {products, setProducts, id, flag} = useContext(Context) 
+    const {products, setProducts} = useContext(Context) 
 
     function massDelete(){
  
